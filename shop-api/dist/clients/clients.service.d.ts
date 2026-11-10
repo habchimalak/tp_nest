@@ -12,7 +12,7 @@ export declare class ClientsService {
         fullName: string;
         email: string;
         id: number;
-        orders: import("../orders/entities/order.entity.js").CustomerOrder[];
+        orders: import("typeorm").Relation<import("../orders/entities/order.entity.js").CustomerOrder[]>;
     } & Client>;
     remove(id: number): Promise<Client>;
 }

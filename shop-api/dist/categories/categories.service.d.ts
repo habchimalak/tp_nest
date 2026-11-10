@@ -11,7 +11,7 @@ export declare class CategoriesService {
     update(id: number, dto: UpdateCategoryDto): Promise<{
         name: string;
         id: number;
-        products: import("../products/entities/product.entity.js").Product[];
+        products: import("typeorm").Relation<import("../products/entities/product.entity.js").Product[]>;
     } & Category>;
     remove(id: number): Promise<Category>;
 }

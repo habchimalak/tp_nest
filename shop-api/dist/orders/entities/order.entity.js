@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany, JoinColumn, CreateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany, JoinColumn, CreateDateColumn, } from 'typeorm';
 import { Client } from '../../clients/entities/client.entity.js';
 import { OrderItem } from './order-item.entity.js';
 let CustomerOrder = class CustomerOrder {
@@ -38,7 +38,7 @@ __decorate([
 __decorate([
     ManyToOne(() => Client, (c) => c.orders, { onDelete: 'RESTRICT' }),
     JoinColumn({ name: 'clientId' }),
-    __metadata("design:type", Client)
+    __metadata("design:type", Object)
 ], CustomerOrder.prototype, "client", void 0);
 __decorate([
     Column(),
@@ -46,7 +46,7 @@ __decorate([
 ], CustomerOrder.prototype, "clientId", void 0);
 __decorate([
     OneToMany(() => OrderItem, (i) => i.order),
-    __metadata("design:type", Array)
+    __metadata("design:type", Object)
 ], CustomerOrder.prototype, "items", void 0);
 CustomerOrder = __decorate([
     Entity('customer_orders')

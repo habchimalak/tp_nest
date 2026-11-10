@@ -1,3 +1,4 @@
+import type { Relation } from 'typeorm';
 import { Client } from '../../clients/entities/client.entity.js';
 import { OrderItem } from './order-item.entity.js';
 export declare class CustomerOrder {
@@ -5,7 +6,7 @@ export declare class CustomerOrder {
     status: string;
     total: string;
     createdAt: Date;
-    client: Client;
+    client: Relation<Client>;
     clientId: number;
-    items: OrderItem[];
+    items: Relation<OrderItem[]>;
 }

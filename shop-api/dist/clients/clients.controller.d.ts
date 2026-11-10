@@ -11,7 +11,7 @@ export declare class ClientsController {
         fullName: string;
         email: string;
         id: number;
-        orders: import("../orders/entities/order.entity.js").CustomerOrder[];
+        orders: import("typeorm").Relation<import("../orders/entities/order.entity.js").CustomerOrder[]>;
     } & import("./entities/client.entity.js").Client>;
     remove(id: number): Promise<import("./entities/client.entity.js").Client>;
 }

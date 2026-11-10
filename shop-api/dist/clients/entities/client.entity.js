@@ -29,7 +29,7 @@ __decorate([
 ], Client.prototype, "email", void 0);
 __decorate([
     OneToMany(() => CustomerOrder, (o) => o.client),
-    __metadata("design:type", Array)
+    __metadata("design:type", Object)
 ], Client.prototype, "orders", void 0);
 Client = __decorate([
     Entity('clients')
